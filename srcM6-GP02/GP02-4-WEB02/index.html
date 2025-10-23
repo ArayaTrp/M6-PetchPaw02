@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<!-- GP02-4-1 -->
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETCH PAW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ส่วน Header -->
+        <div class="header">
+            <div class="header-top">
+                <div class="title">
+                    <h1> PETCH PAW </h1>
+                    <h5>อุปกรณ์บริหารมือพร้อมการแสดงผลแบบเรียลไทม์ และระบบติดตามความคืบหน้า</h5> 
+                </div> 
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card blue"> 
+                    <div class="stat-value blue" id="squeezeCount">0</div> 
+                    <div class="stat-label">จำนวนครั้งที่บีบ</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-value green" id="maxPressure">0</div>
+                    <div class="stat-label">แรงดันสูงสุด</div>
+                </div>
+                <div class="stat-card red">
+                    <div class="stat-value red" id="minPressure">0</div>
+                    <div class="stat-label">แรงดันต่ำสุด</div>
+                </div>
+                <div class="stat-card yellow"> 
+                    <div class="stat-value yellow" id="avrPressure">0</div>
+                    <div class="stat-label">ค่าเฉลี่ย</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <div class="card" id="realtimeCard">
+                <div class="card-title">
+                    แสดงผลการบีบแบบเรียลไทม์
+                </div>
+
+                <div class="pressure-display">
+                    <div class="current-pressure" id="currentPressure">0</div>
+                    <div class="pressure-unit">kPa</div>
+                </div>
+
+                <div class="pressure-bar-container">
+                    <div class="pressure-bar">
+                        <div class="pressure-fill blue" id="pressureFill" style="width: 0%;"></div> 
+                    </div>
+                </div>
+
+                <div class="motivation-box">
+                    <div class="motivation-text" id="motivationText">มาเริ่มบีบกันเลย!</div>
+                </div>
+
+                <!-- <div class="control-buttons">
+                    <button class="btn btn-start">เริ่ม</button>
+                    <button class="btn btn-stop">หยุด</button>
+                    <button class="btn btn-record" id="recordBtn">บันทึก</button>
+                </div> -->
+            </div>
+
+            <div class="card">
+                <div id="tableHeader">
+                    <span class="headTable" >ตารางแรงกด</span>
+                    <span class="headTable" id="currentDateTime"></span>
+                </div>
+
+                <table class="pressure-table" id="pressureTable">
+                    <thead>
+                        <tr>
+                            <th>ครั้งที่</th>
+                            <th>แรงกด (kPa)</th>
+                            <th>เวลา</th>
+                            <th>ระดับแรง</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pressureTableBody">
+                        <!-- <tr><td>1</td><td></td><td></td><td></td></tr>
+                        <tr><td>2</td><td></td><td></td><td></td></tr>
+                        <tr><td>3</td><td></td><td></td><td></td></tr>
+                        <tr><td>4</td><td></td><td></td><td></td></tr>
+                        <tr><td>5</td><td></td><td></td><td></td></tr>
+                        <tr><td>6</td><td></td><td></td><td></td></tr>
+                        <tr><td>7</td><td></td><td></td><td></td></tr>
+                        <tr><td>8</td><td></td><td></td><td></td></tr>
+                        <tr><td>9</td><td></td><td></td><td></td></tr>
+                        <tr><td>10</td><td></td><td></td><td></td></tr> -->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
